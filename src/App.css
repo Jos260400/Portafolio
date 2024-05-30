@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f3f5;
+  color: #212529;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.App-header {
+  background-color: rgba(144, 146, 149, 0.5); 
+  padding: 30px 0;
+  color: #ffffff; 
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInDown 1s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.App-header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+.Content {
+  padding: 40px 20px;
+}
+
+.Section {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 30px;
+  margin-bottom: 30px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.Section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.Section p {
+  font-size: 16px;
+  color: #495057;
+}
+
+.Section button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Section button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a {
+  color: #007bff; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline; 
+  color: #0056b3;
+}
+
+.Footer {
+  background-color: #343a40; 
+  color: #ffffff; 
+  padding: 20px 0;
+  text-align: center; 
+  animation: fadeIn 1s ease-out;
+}
+
+.Footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.SocialLinks a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.SocialLinks a:hover {
+  transform: scale(1.2);
+}
+
+.SocialLinks img {
+  width: 30px;
+  height: 30px;
+}
+
+.photo-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  height: 200px;
+}
+
+.photo-carousel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+}
+
+.photo-carousel img.active {
+  opacity: 1;
+}
+
+.Biography {
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  animation: fadeInUp 1s ease forwards;
+}
+
+.Biography h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.Biography p {
+  font-size: 16px;
+  color: #495057;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+.Section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Section form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #495057;
+}
+
+.Section form input,
+.Section form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.Section form button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Section form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+}
